@@ -41,5 +41,9 @@
   "la": {
     "language": "latin",
     "greetings": ["Salve Orbis Terrarum"]
+  },
+  "pl": {
+    "language": "polish",
+    "greetings": ["Witaj świecie"]
   }
 }

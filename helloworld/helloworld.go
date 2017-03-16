@@ -21,7 +21,7 @@ var (
 // ensure ∃ "hw.json" with map[string]Language.
 // allow a "-lang" flag to set default language
 func init() {
-	f, err := os.Open("hw.json")
+	f, err := os.Open("languages.json")
 	if err != nil {
 		panic(err)
 	}
