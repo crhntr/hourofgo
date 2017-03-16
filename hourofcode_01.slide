@@ -6,7 +6,6 @@ Introduction to Go for CI Computer Girls Hour of Code, Hour of GOde
 Christopher Hunter
 hunter.christopher@icloud.com
 @crhntr
-.image ./images/crhntr.png
 
 * Why Go?
 “things were just taking too long: too long to compile, to long to build, and
@@ -56,13 +55,13 @@ A trivial "hello world" program
 A command line application that optionally takes a name argument
 and a -lang flag
 
-    $helloworld
+    $ helloworld
     Hello world!
-    $helloworld <name>
+    $ helloworld nick
     Hello Nick!
-    $helloworld -lang=es
+    $ helloworld -lang=es
     Holla Mundo!
-    $helloworld -lang=es Lex
+    $ helloworld -lang=es Lex
     Holla Lex
 
 * Task 2
@@ -99,5 +98,5 @@ Also language can be selected by Accept-Language http header
 .link https://www.youtube.com/watch?v=PAAkCSZUG1c
 
 * Gopher's look like ...
-.image ./images/gopher.jpg
+.image ./images/crhntr.png
 .link https://gopherize.me
