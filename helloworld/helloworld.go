@@ -5,11 +5,11 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"log"
 	"math/rand"
 	"net/http"
 	"os"
 	"strings"
-	"log"
 )
 
 var (
@@ -57,7 +57,9 @@ func main() {
 }
 
 func HelloHandler(w http.ResponseWriter, r *http.Request) {
-	var ( l, greeting, who string )
+	var (
+		l, greeting, who string
+	)
 
 	fmt.Fprintf(w, "<h1>")
 	defer fmt.Fprintf(w, "</h1>\n")
@@ -122,11 +124,13 @@ func (l Language) Greet(who string) (string, error) {
 }
 
 type Sentiment int
+
 const (
 	NotImplemented Sentiment = iota
 	UnknownLanguage
 	VowOfSilence
 )
+
 func (s Sentiment) Error() string {
 	switch s {
 	case UnknownLanguage:
