@@ -1,0 +1,41 @@
+{
+  "af": {
+    "af"
+    "greeting": ["Hello Wêreld"],
+    "fmt": "%s %s!",
+  },
+  "sq": {
+    "language": "albanian",
+    "greeting": ["Përshendetje Botë"]
+  },
+  "ht": {
+    "language": "hatian",
+    "greeting": ["Alo Mondyal"]
+  },
+  "hy": {
+    "language": "armenian",
+    "greeting": ["Բարեւ աշխարհ"]
+  },
+  "uk": {
+    "language": "ukrainian",
+    "greeting": ["Привіт Світ", "Здравствуйте Світ"]
+  },
+  "ru": {
+    "language": "russian",
+    "greetings": ["Привет мир"]
+  },
+  "es": {
+    "language": "spanish",
+    "greetings": ["Hola Mundo", "Saludos Planeta"],
+    "fmt": "¡%s %s!",
+  },
+  "en": {
+    "language": "english",
+    "greetings": ["Hello World", "Greetings World"],
+    "fmt": "¡%s %s!",
+  },
+  "fr": {
+    "language": "french",
+    "greetings": ["Bonjour le monde", "Salutations planète"]
+  }
+}
