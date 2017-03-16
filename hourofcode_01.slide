@@ -90,12 +90,23 @@ Also language can be selected by Accept-Language http header
 .link https://changelog.com/gotime
 
 * ...
+- COMP 262/162: GopherCon 2016: Rob Pike - The Design of the Go Assembler
+.link https://www.youtube.com/watch?v=KINIAgRpkDA
 - COMP 232: Lexical Scanning in Go - Rob Pike
 .link https://www.youtube.com/watch?v=HxaD_trXwRE
 - COMP 362: Google I/O 2012 - Go Concurrency Patterns
 .link https://www.youtube.com/watch?v=f6kdp27TYZs
 - COMP 350: Lexical Scanning in Go - Rob Pike
 .link https://www.youtube.com/watch?v=PAAkCSZUG1c
+
+* Potential Future Hour of Code Topics
+  - Concurrency
+  - Testing
+  - Standard Library Review (group)
+
+* Citations
+- "Why Quote":
+- Survey images: https://blog.golang.org/survey2016-results
 
 * Gopher's look like ...
 .image ./images/crhntr.png
