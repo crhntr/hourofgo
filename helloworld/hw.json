@@ -37,5 +37,9 @@
   "fr": {
     "language": "french",
     "greetings": ["Bonjour le monde", "Salutations planète"]
+  },
+  "la": {
+    "language": "latin",
+    "greetings": ["Salve Orbis Terrarum"]
   }
 }
