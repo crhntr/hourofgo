@@ -1,24 +1,24 @@
 {
   "af": {
     "language": "africans",
-    "greeting": ["Hello Wêreld"],
+    "greetings": ["Hello Wêreld"],
     "fmt": "%s %s!"
   },
   "sq": {
     "language": "albanian",
-    "greeting": ["Përshendetje Botë"]
+    "greetings": ["Përshendetje Botë"]
   },
   "ht": {
     "language": "hatian",
-    "greeting": ["Alo Mondyal"]
+    "greetings": ["Alo Mondyal"]
   },
   "hy": {
     "language": "armenian",
-    "greeting": ["Բարեւ աշխարհ"]
+    "greetings": ["Բարեւ աշխարհ"]
   },
   "uk": {
     "language": "ukrainian",
-    "greeting": ["Привіт Світ", "Здравствуйте Світ"]
+    "greetings": ["Привіт Світ", "Здравствуйте Світ"]
   },
   "ru": {
     "language": "russian",
