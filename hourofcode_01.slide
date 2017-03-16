@@ -1,10 +1,12 @@
 Hour of Go
-Introduction to Go for CI Computer Girls Hour of Code
+Introduction to Go for CI Computer Girls Hour of Code, Hour of GOde
 23 mar 2017
+
 
 Christopher Hunter
 hunter.christopher@icloud.com
 @crhntr
+.image ./images/crhntr.png
 
 * Why Go?
 “things were just taking too long: too long to compile, to long to build, and
@@ -12,3 +14,90 @@ too long to think about… We want to program fast fun. We want to program fun.
 And to make programming fun, you have find ways to speed things up and make
 things work better. Not just the code itself but also the process for writing
 code needs to be efficient“
+
+* Language Designers
+- Robert Griesemer
+- Rob Pike
+- Ken Thompson
+
+
+* Gopher's also know ...
+.image ./images/expertise.png
+
+*
+.image ./images/primary_lang.png
+
+* Gopher's build ...
+.image ./images/for_what.png
+
+* Gopher's like ...
+.image ./images/most_like.png
+
+* Gopher's would like ...
+.image ./images/improvements.png
+
+* Gopher's preferred editor ...
+.image ./images/prefered_editor.png
+
+* Gopher's look for help ...
+.image ./images/where_help.png
+
+* Gopher's favorite keyword is ...
+.image ./images/fav_keyword.png
+.image ./images/fav_keyword02.png
+
+* Hello world!
+
+* Task 0
+A trivial "hello world" program
+.play hw/hw.go
+
+* Task 1
+A command line application that optionally takes a name argument
+and a -lang flag
+
+    $helloworld
+    Hello world!
+    $helloworld <name>
+    Hello Nick!
+    $helloworld -lang=es
+    Holla Mundo!
+    $helloworld -lang=es Lex
+    Holla Lex
+
+* Task 2
+A server responding with a <h1>{{greeting}}</h1> in the body
+    /
+    /<name>
+    /<name>?lang=es
+    /?lang=es
+
+Also language can be selected by Accept-Language http header
+
+    curl 127.0.0.1:8080/
+    curl 127.0.0.1:8080/<name>
+    curl 127.0.0.1:8080/<name>?lang=es
+    curl 127.0.0.1:8080/?lang=es
+    curl --header "Accept-Language: pl" /Andrzej
+
+* Epilogue
+
+* Some good go community stuff
+- Everyone: The official site
+.link https://golang.org
+- Curious Ones: Tour of Go
+.link https://tour.golang.org/welcome/1
+- Commuters: GoTime Podcast
+.link https://changelog.com/gotime
+
+* ...
+- COMP 232: Lexical Scanning in Go - Rob Pike
+.link https://www.youtube.com/watch?v=HxaD_trXwRE
+- COMP 362: Google I/O 2012 - Go Concurrency Patterns
+.link https://www.youtube.com/watch?v=f6kdp27TYZs
+- COMP 350: Lexical Scanning in Go - Rob Pike
+.link https://www.youtube.com/watch?v=PAAkCSZUG1c
+
+* Gopher's look like ...
+.image ./images/gopher.jpg
+.link https://gopherize.me
