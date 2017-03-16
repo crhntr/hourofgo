@@ -11,12 +11,16 @@ func TestLanguage_Greet01(t *testing.T) {
 		Fmt:       "¡%s %s!",
 	}
 
-	if es.Greet("") != es.Greetings[0] {
+	if g, err := es.Greet(""); g != es.Greetings[0] {
 		t.Fail()
+	} else if err != nil {
+		t.Error(err)
 	}
 
-	if es.Greet("Orange") != "¡Hola Orange!" {
+	if g, err := es.Greet("Orange"); g != "¡Hola Orange!" {
 		t.Fail()
+	} else if err != nil {
+		t.Error(err)
 	}
 }
 
@@ -26,11 +30,15 @@ func TestLanguage_Greet02(t *testing.T) {
 		Greetings: []string{"qo' vIvan"},
 	}
 
-	if es.Greet("") != es.Greetings[0] {
+	if g, err := es.Greet(""); g != es.Greetings[0] {
 		t.Fail()
+	} else if err != nil {
+		t.Error(err)
 	}
 
-	if es.Greet("Orange") != "qo' Orange!" {
+	if g, err := es.Greet("Orange"); g != "qo' Orange!" {
 		t.Fail()
+	} else if err != nil {
+		t.Error(err)
 	}
 }
