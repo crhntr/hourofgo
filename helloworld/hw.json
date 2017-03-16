@@ -1,8 +1,8 @@
 {
   "af": {
-    "af"
+    "language": "africans",
     "greeting": ["Hello Wêreld"],
-    "fmt": "%s %s!",
+    "fmt": "%s %s!"
   },
   "sq": {
     "language": "albanian",
@@ -27,12 +27,12 @@
   "es": {
     "language": "spanish",
     "greetings": ["Hola Mundo", "Saludos Planeta"],
-    "fmt": "¡%s %s!",
+    "fmt": "¡%s %s!"
   },
   "en": {
     "language": "english",
     "greetings": ["Hello World", "Greetings World"],
-    "fmt": "¡%s %s!",
+    "fmt": "¡%s %s!"
   },
   "fr": {
     "language": "french",

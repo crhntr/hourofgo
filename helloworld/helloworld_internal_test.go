@@ -4,19 +4,33 @@ import (
 	"testing"
 )
 
-func TestSayHello(t *testing.T) {
-	tests := []struct {
-		to, lang, ret string
-	}{
-		{"", "", "Hello World!"},
-		{"Maria", "fr", "Bonjour Maria!"},
-		{"Lex", "es", "¡Hola Lex!"},
+func TestLanguage_Greet01(t *testing.T) {
+	es := Language{
+		Name:      "spanish",
+		Greetings: []string{"Hola Mundo"},
+		Fmt:       "¡%s %s!",
 	}
 
-	for i, tst := range tests {
-		ret := sayHello(tst.to, tst.lang)
-		if ret != tst.ret {
-			t.Errorf("say hello test %d failed sayHello(%q, %q) should return %q but got %q", i, tst.to, tst.lang, tst.ret, ret)
-		}
+	if es.Greet("") != es.Greetings[0] {
+		t.Fail()
+	}
+
+	if es.Greet("Orange") != "¡Hola Orange!" {
+		t.Fail()
+	}
+}
+
+func TestLanguage_Greet02(t *testing.T) {
+	es := Language{
+		Name:      "klingon",
+		Greetings: []string{"qo' vIvan"},
+	}
+
+	if es.Greet("") != es.Greetings[0] {
+		t.Fail()
+	}
+
+	if es.Greet("Orange") != "qo' Orange!" {
+		t.Fail()
 	}
 }

@@ -3,14 +3,17 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"math/rand"
+	"net/http"
 	"os"
-	"flag"
+	"strings"
 )
 
 var (
-	languages = map[string]HWLang{}
+	languages       = map[string]Language{}
+	idiomaPrincipal *string
 )
 
 func init() {
@@ -25,52 +28,52 @@ func init() {
 	}
 
 	// parse flags
-	defaultLanguage := flag.String("lang", "es", "default language as standard abreviation")
+	idiomaPrincipal := flag.String("lang", "es", "default language as standard abreviation")
+	// httpPort := flag.String("port", "8080", "default language as standard abreviation")
 	flag.Parse()
-}
 
+	if _, ok := languages[*idiomaPrincipal]; !ok {
+		panic("unknown defualt language")
+	}
+}
 
 func main() {
 	switch flag.Arg(1) {
 	case "server":
-		http.HandleFunc("/", )
-
-	}
-
-}
-
-
-
-
-const helloWorldMessage = "Hello World!"
-
-type HWLang struct {
-	Hello []string `json:"hello,omitempty"`
-	Fmt   string   `json:"fmt,omitempty"`
-}
-
-func sayHello(to, language string) string {
-	if to == "" {
-		to = "world"
-	}
-
-	if language != "" {
-
-	}
-
-	if langData, ok := languages[language]; ok {
-		if langData.Fmt == "" {
-			return fmt.Sprintf("%s %s!",
-				langData.Hello[rand.Int()%len(langData.Hello)],
-				to,
-			)
+		http.HandleFunc("/", HelloHandler)
+		http.ListenAndServe(":8080", nil)
+	default:
+		lang, ok := languages[*idiomaPrincipal]
+		if !ok {
+			fmt.Println("😕")
+			return
 		}
-
-		return fmt.Sprintf(langData.Fmt,
-			langData.Hello[rand.Int()%len(langData.Hello)],
-			to,
-		)
+		fmt.Println(lang.Greet(flag.Arg(1)))
 	}
 
-	return ""
+}
+
+func HelloHandler(w http.ResponseWriter, r *http.Request) {
+	
+}
+
+type Language struct {
+	Greetings []string `json:"greetings,omitempty"`
+	Name      string   `json:"language,omitempty"`
+	Fmt       string   `json:"fmt,omitempty"`
+}
+
+func (l Language) Greet(who string) string {
+	greeting := l.Greetings[rand.Int()%len(l.Greetings)]
+	if who == "" {
+		return greeting
+	}
+	greeting = strings.Split(greeting, " ")[0]
+
+	fmtStr := l.Fmt
+	if fmtStr == "" {
+		fmtStr = "%s %s!"
+	}
+
+	return fmt.Sprintf(fmtStr, greeting, who)
 }
