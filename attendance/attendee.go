@@ -3,14 +3,12 @@ package attendance
 type Attendee struct {
 	// ID    SomeSortOfUniqueID
 
-	Name     Name
+	Name     []string
 	Pass     Passer
 	Contacts []*Attendee
 }
 
-type Name struct {
-	NameSections []string
-}
+type Name []string
 
 func (nm Name) Valid() bool {
 	return true
