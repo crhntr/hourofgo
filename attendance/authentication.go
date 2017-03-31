@@ -1,9 +1,5 @@
 package attendance
 
-type Validator interface {
-	Valid() bool
-}
-
 type Passer interface {
 	Validator
 	Difference() int
